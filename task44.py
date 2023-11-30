@@ -13,8 +13,8 @@ print("Начальный датафрейм:")
 print(data)
 print("-----------------------------------------------------------------------------------")
 
-data.loc[data['whoAmI'] == 'human', "whoAmI"] = 1
-data.loc[data['whoAmI'] == 'robot', "whoAmI"] = 0
+data.loc[data['whoAmI'] == 'human', "whoAmI"] = 1 # Меняем в one hot
+data.loc[data['whoAmI'] == 'robot', "whoAmI"] = 0 # Меняем в one hot
 
 print("Датафрейм в виде one hot:")
 print(data)
