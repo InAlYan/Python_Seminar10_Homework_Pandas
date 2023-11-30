@@ -9,5 +9,14 @@ lst += ['human'] * 10
 random.shuffle(lst)
 data = pd.DataFrame({'whoAmI': lst})
 
+print("Начальный датафрейм:")
+print(data)
+print("-----------------------------------------------------------------------------------")
+
 data.loc[data['whoAmI'] == 'human', "whoAmI"] = 1
 data.loc[data['whoAmI'] == 'robot', "whoAmI"] = 0
+
+print("Датафрейм в виде one hot:")
+print(data)
+
+data.to_csv("whoAmI_one_hot.csv", index=False)
